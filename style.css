@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
+
+*{
+    margin: 0;
+}
+:root {
+    --Violet:hsl(257, 40%, 49%);
+}
+
+@media screen and (min-width: 800px) {
+
+body {
+    background-image: url(src/bg-desktop.svg);
+    background-color: var(--Violet);
+}
+.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 
+    "a a"
+    "b c"
+    "d d";
+}
+.logo {
+    grid-area: a;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.image {
+    grid-area: b;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.image > img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.text {
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text> h1 {
+    margin-left: 5%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1em;
+}
+.text>p {
+    margin-left: 5%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+.text>input {
+    margin-left: 5%;
+    width: 25%;
+    height: 10%;
+    border-radius: 2em;
+    font-family: 'Open Sans', sans-serif;
+    color: gray;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.text>input:hover{
+    
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.social {
+    grid-area: d;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    color: white;
+}
+.social> ion-icon {
+    margin-right: 2%;
+    cursor: pointer;
+}
+}
+@media screen and (max-width: 800px) {
+    body {
+        background-image: url(src/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-color: var(--Violet);
+    }
+    .logo {
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .image {
+        margin: 5%;
+        margin-bottom: 0%;
+        margin-top: 0%;
+    }
+    .image > img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .text {
+        grid-area: c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .text> h1 {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        text-align: center;
+    }
+    .text>p {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 1em;
+        line-height: 1.5em;
+        text-align: center;
+        margin-bottom: 10%;
+
+    }
+    .text>input {
+        border-radius: 2em;
+        font-family: 'Open Sans', sans-serif;
+        color: gray;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin: auto;
+        padding-right: 20%;
+        padding-left: 20%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+    .text>input:hover{
+        
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    }
+    
+    .social {
+        grid-area: d;
+        display: flex;
+        justify-content: flex-end;
+        margin: 10%;
+        color: white;
+        
+    }
+    .social> ion-icon {
+        margin-right: 2%;
+        cursor: pointer;
+    }
+}
